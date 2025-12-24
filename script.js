@@ -10,36 +10,6 @@ menuBtn.addEventListener('click', () => {
     icon.classList.toggle('fa-xmark');
 });
 
-// popup message 
-// Popup Logic
-window.onload = function() {
-    const popup = document.getElementById('statusPopup');
-    const closeX = document.getElementById('closePopup');
-    const closeBtn = document.getElementById('gotItBtn');
-
-    // Show popup after 1 second
-    setTimeout(() => {
-        popup.style.display = 'flex';
-    }, 1000);
-
-    // Close on X click
-    closeX.onclick = function() {
-        popup.style.display = 'none';
-    }
-
-    // Close on button click
-    closeBtn.onclick = function() {
-        popup.style.display = 'none';
-    }
-
-    // Close if user clicks outside the white box
-    window.onclick = function(event) {
-        if (event.target == popup) {
-            popup.style.display = 'none';
-        }
-    }
-};
-
 // Back button
 // Back to Top Logic
 const backToTopBtn = document.getElementById("backToTop");
@@ -80,3 +50,34 @@ document.querySelector('.contact-form').addEventListener('submit', (e) => {
     alert("Thank you! Your message has been sent. Our team will contact you soon.");
     e.target.reset();
 });
+
+
+// popup message 
+// Popup Logic
+window.onload = function() {
+    const popup = document.getElementById('statusPopup');
+    const closeX = document.getElementById('closePopup');
+    const closeBtn = document.getElementById('gotItBtn');
+
+    // Show popup after 1 second
+    setTimeout(() => {
+        popup.style.display = 'flex';
+    }, 1000);
+
+    // Close on X click
+    closeX.onclick = function() {
+        popup.style.display = 'none';
+    }
+
+    // Close on button click
+    closeBtn.onclick = function() {
+        popup.style.display = 'none';
+    }
+
+    // Close if user clicks outside the white box
+    window.onclick = function(event) {
+        if (event.target == popup) {
+            popup.style.display = 'none';
+        }
+    }
+};
