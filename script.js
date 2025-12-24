@@ -103,6 +103,6 @@ function animateCounter(id, target) {
 
 // Start counter when page loads
 window.addEventListener('DOMContentLoaded', () => {
-    animateCounter('volunteers-count', 50); // Set your actual volunteer count here
+    animateCounter('volunteers-count', 12); // Set your actual volunteer count here
 });
         
