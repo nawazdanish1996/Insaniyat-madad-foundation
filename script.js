@@ -82,40 +82,27 @@ window.onload = function() {
     }
 };
 
-/* Map & Location */
-.map-wrapper {
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border: 5px solid white;
+// Live Clock for Goalpokher
+function updateClock() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString();
+    document.getElementById('live-time').innerText = timeString;
+}
+setInterval(updateClock, 1000);
+
+// Volunteer Counter Animation
+function animateCounter(id, target) {
+    let count = 0;
+    const speed = 2000 / target; // Adjust speed
+    const timer = setInterval(() => {
+        count++;
+        document.getElementById(id).innerText = count + "+";
+        if (count === target) clearInterval(timer);
+    }, speed);
 }
 
-/* Stats Bar */
-.stats-bar {
-    background: var(--primary-color);
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 5%;
-    text-align: center;
-}
-
-.stat-item h3 {
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-}
-
-.stat-item p {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Responsive Fix for Map */
-@media screen and (max-width: 768px) {
-    .stats-bar {
-        flex-direction: column;
-        gap: 30px;
-    }
-}
-
+// Start counter when page loads
+window.addEventListener('DOMContentLoaded', () => {
+    animateCounter('volunteers-count', 50); // Set your actual volunteer count here
+});
+        
