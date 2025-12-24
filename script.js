@@ -105,20 +105,3 @@ function animateCounter(id, target) {
 window.addEventListener('DOMContentLoaded', () => {
     animateCounter('volunteers-count', 12); // Set your actual volunteer count here
 });
-
-
-
-
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
-    const hiddenItems = document.querySelectorAll('.gallery-item.hidden');
-
-    loadMoreBtn.addEventListener('click', function() {
-        hiddenItems.forEach(item => {
-            item.classList.remove('hidden');
-        });
-        
-        // Hide the button after all images are shown
-        loadMoreBtn.style.display = 'none';
-    });
-                        
-        
