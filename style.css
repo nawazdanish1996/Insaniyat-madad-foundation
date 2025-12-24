@@ -176,7 +176,7 @@ ul { list-style: none; }
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px; /* Changed from right to left */
     background-color: #25d366;
     color: white;
     padding: 10px 20px;
@@ -188,6 +188,12 @@ ul { list-style: none; }
     box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
     z-index: 3000;
     text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.05);
+    color: white;
 }
 
 .whatsapp-float i {
@@ -196,8 +202,15 @@ ul { list-style: none; }
 
 /* Hide text on very small phones, keep only icon */
 @media screen and (max-width: 480px) {
-    .whatsapp-float span { display: none; }
-    .whatsapp-float { padding: 15px; border-radius: 50%; }
+    .whatsapp-float span { 
+        display: none; 
+    }
+    .whatsapp-float { 
+        padding: 15px; 
+        border-radius: 50%; 
+        bottom: 15px;
+        left: 15px;
+    }
 }
 
 
