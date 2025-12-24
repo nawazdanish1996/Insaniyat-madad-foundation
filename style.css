@@ -242,39 +242,3 @@ ul { list-style: none; }
         gap: 30px;
     }
 }
-
-
-/* Section Wrapper */
-/* Hide extra items */
-.hidden {
-    display: none;
-}
-
-/* Button Container */
-.view-more-container {
-    text-align: center;
-    margin-top: 40px;
-}
-
-/* Button Styling */
-.btn-view-more {
-    background-color: #f39c12; /* NGO Orange */
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.btn-view-more:hover {
-    background-color: #e67e22;
-    transform: scale(1.05);
-}
-
-.btn-view-more:active {
-    transform: scale(0.98);
-}
